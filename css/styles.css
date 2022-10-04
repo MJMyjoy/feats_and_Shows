@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/nuages.jpeg")no-repeat;
+    background-size: cover; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1
+{
+    text-align: center;
+}
+
+@keyframes page 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes avion 
+{
+    100%
+    {
+        transform: translateX(350%);
+        -webkit-transform: translateX(350%);
+    }
+}
+
+
+  main
+  {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(20, 20, 20, 0.5);
+    animation: page 5s 1s both;
+    -webkit-animation: page 5s 1s both;
+}
+
+
+  
+  
+.avion
+{
+    position: fixed;
+    transform: translateY(400%);
+    width: 270px;
+    height: 122px;
+    object-fit: cover;
+    animation: avion 5s 0.5s both;
+    -webkit-animation: avion 5s 0.5s both;
+}
+
+
+span
+{
+    color: pink;
+    font-style: italic;
+}
+
+a
+{
+    text-decoration: none;
+    color: pink;
+}
+
+.pngs
+  {
+      object-fit: cover;
+      height: 50px;
+      padding: 7px;
+      border-radius: 5px;
+      transition: all 1s;
+     -webkit-transition: all 1s;
+  }
+
+  .pngs:hover
+  {
+      background-color: rgb(128, 128, 128, 0.3);
+      transform: scale(1.15);
+      -webkit-transform: scale(1.15);
+  }
+
+
+
+
+  @media screen and (max-width: 900px)
+  {
+   
+.avion
+{
+    width: 108px;
+    height: 50px;
+  }
+  .pngs
+  {
+      height: 30px;
+  }
+}
