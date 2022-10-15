@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>Calcul mental</title>
+</head>
+<body>
+    <div id="home">
+        <h1>Calcul mental</h1>
+        <p>Etes-vous vraiment sûr de vous?</p>
+        <button class="lancer">Lancer</button>
+    </div>
+
+
+    <div id="game">
+        <div id="timego"><div id="times"></div></div>
+        <form>
+            <label for="calcul" id="quiz"></label>
+            <input type="number" id="answer">
+        </form>
+    </div>
+
+
+    <div id="win">
+        <h1>Bravo !</h1>
+        <p>Vous pouvez encore y arriver?</p>
+        <button class="jouer">Continuer</button>
+    </div>
+
+
+    <div id="lose">
+        <h1>Perdu !</h1>
+        <p>La reponse était: <span class="correction"></span></p> 
+        <button class="jouer">Recommencer</button>
+    </div>
+</body>
+</html>
