@@ -92,5 +92,8 @@ footer
     padding: 10px;
 }
 
-
-  
+footer p
+{
+    color: black;
+    font-size: 12px;
+}

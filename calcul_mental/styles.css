@@ -70,7 +70,7 @@ form
     height: 100px;
     border-radius: 100%;
     margin: 20px auto;
-    background: linear-gradient(white, black);
+    background: linear-gradient(black, white);
     animation: tourne 1s ease-in-out infinite, rouge 1s 17.5s both;
 }
 #times

@@ -45,7 +45,7 @@ lancer.onclick= function() {
     setInterval(function(){
         time_it --;
         times.innerHTML = time_it;
-        if (answer.value == eval(equation))
+        if (parseInt(answer.value, 10) === eval(equation))
         {
             game.style.display="none";
             win.style.transform= "scale(1) rotate(0deg)";
@@ -53,7 +53,7 @@ lancer.onclick= function() {
     }, 1*1000);
 
     setTimeout (function(){
-        if (answer.value == eval(equation))
+        if (parseInt(answer.value, 10) === eval(equation))
         {
             game.style.display="none";
             win.style.transform= "scale(1) rotate(0deg)";
