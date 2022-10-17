@@ -22,30 +22,43 @@ lancer.onclick= function() {
     home.style.display = "none";
     game.style.display = "block";
     
-    let nb1 = Math.floor(Math.random() * 10);
-    let nb2 = Math.floor(Math.random() * 10);
-    let nb3 = Math.floor(Math.random() * 10);
-    let nb4 = Math.floor(Math.random() * 10);
+    let nb1 = Math.floor(Math.random() * 12);
+    let nb2 = Math.floor(Math.random() * 12);
+    let nb3 = Math.floor(Math.random() * 12);
+    let nb4 = Math.floor(Math.random() * 12);
     let sgn1 = signes[Math.floor(Math.random() * 3)];
     let sgn2 = signes[Math.floor(Math.random() * 3)];
     let sgn3 = signes[Math.floor(Math.random() * 3)];
+    
+    let paranth1 = Math.floor(Math.random() * 2);
+    let paranth2 = Math.floor(Math.random() * 2);
+    let paranth3=0, open_p3, close_p3;
 
-    paranth1 = Math.floor(Math.random() * 2);
-    paranth2 = Math.floor(Math.random() * 2);
+    if(paranth1===0 && paranth2===0)
+    {
+        // Les parantheses du milieu ne peuvent exister que si les autres parantheses sont absents.
+        paranth3 = Math.floor(Math.random() * 2);
+        open_p3 = open_p[paranth3];
+        close_p3 = close_p[paranth3];
+    }
+
     let open_p1 = open_p[paranth1];
     let close_p1 = close_p[paranth1];
 
     let open_p2 = open_p[paranth2];
     let close_p2 = close_p[paranth2];
 
-    let equation = open_p1 + ' '+nb1+' '+sgn1+' '+nb2+' '+close_p1+' '+sgn2+' '+open_p2 + ' '+nb3+' '+sgn3+' '+nb4+' '+close_p2
+    open_p3 = open_p[paranth3];
+    close_p3 = close_p[paranth3];
+
+    let equation = open_p1 + ' '+nb1+' '+sgn1+' '+ ' '+ open_p3 + ' '+ nb2+' '+close_p1+' '+sgn2+' '+open_p2 + ' '+nb3+ ' '+ close_p3 +' '+sgn3+' '+nb4+' '+close_p2;
 
     quiz.innerHTML = equation + ' = ';
 
     setInterval(function(){
         time_it --;
         times.innerHTML = time_it;
-        if (parseInt(answer.value, 10) === eval(equation))
+        if (parseFloat(answer.value) === eval(equation))
         {
             game.style.display="none";
             win.style.transform= "scale(1) rotate(0deg)";
@@ -53,7 +66,7 @@ lancer.onclick= function() {
     }, 1*1000);
 
     setTimeout (function(){
-        if (parseInt(answer.value, 10) === eval(equation))
+        if (parseFloat(answer.value) === eval(equation))
         {
             game.style.display="none";
             win.style.transform= "scale(1) rotate(0deg)";
