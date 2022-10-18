@@ -127,6 +127,7 @@ input
     cursor: pointer;
     font-size: italic;
     transition: transform 0.2s ease-in-out;
+    outline: none;
 }
 .jouer:hover, .lancer:hover
 {
