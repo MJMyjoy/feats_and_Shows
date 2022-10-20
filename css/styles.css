@@ -1,3 +1,5 @@
+/* STYLES DE BASE */
+
 body {
     margin: 0;
     padding: 0;
@@ -8,7 +10,25 @@ body {
 h1
 {
     text-align: center;
+    color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+img
+{
+    max-width: 100%;
+}
+
+em
+{
+    color: pink;
+}
+a
+{
+    color: pink;
+    text-decoration: none;
+}
+
+/* KEYFRAMES */
 
 @keyframes page 
 {
@@ -27,24 +47,11 @@ h1
     100%
     {
         transform: translateX(400%);
-        -webkit-transform: translateX(400%);
     }
 }
 
-
-  main
-  {
-    width: 100%;
-    text-align: center;
-    color: white;
-    background-color: rgba(20, 20, 20, 0.7);
-    animation: page 5s 1s both;
-    -webkit-animation: page 5s 1s both;
-}
-
-
-  
-  
+/* AUTRES */
+ 
 .avion
 {
     position: fixed;
@@ -53,42 +60,69 @@ h1
     height: 122px;
     object-fit: cover;
     animation: avion 5s 0.5s both;
-    -webkit-animation: avion 5s 0.5s both;
 }
 
+main
+  {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(20, 20, 20, 0.7);
+    animation: page 5s 1s both;
+}
 
-span
+/* figures */
+
+figure img
 {
-    color: pink;
+    width: 200px;
+}
+
+figcaption
+{
+    opacity: 0.8;
     font-style: italic;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-a
-{
-    text-decoration: none;
-    color: pink;
-}
+/*les icones et liens speciaux*/
 
-.pngs
+.icones
   {
       object-fit: cover;
       height: 50px;
       padding: 7px;
       border-radius: 5px;
-      transition: all 1s;
-     -webkit-transition: all 1s;
+      transition: all 0.8s ease-in-out;
   }
-
-  .pngs:hover
+.icones:hover
   {
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.8);
       transform: scale(1.15);
-      -webkit-transform: scale(1.15);
   }
 
+.btn
+  {
+      border-radius: 5px;
+      padding: 5px;
+      outline: none;
+      transition: all 0.7s ease-in-out;
+  }
+  
+.btn:hover
+      {
+      box-shadow: 0 6px 6px 0 rgba(255, 192, 203, 0.26),
+                  0 10px 20px 0 rgba(255, 192, 203, 0.19);
+      }
+  
+  /* le pied */
+  
 footer
 {
-    background-color: slategray;
+    background: linear-gradient(rgb(0, 0, 0, 0), slategray);
     padding: 10px;
 }
 
@@ -97,3 +131,13 @@ footer p
     color: black;
     font-size: 12px;
 }
+
+
+@media screen and (max-width: 1000px)
+    {
+     .avion
+        {
+            width: 135px;
+            height: 61px;
+        }
+    }
