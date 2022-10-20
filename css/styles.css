@@ -122,7 +122,7 @@ figcaption
   
 footer
 {
-    background: linear-gradient(rgb(0, 0, 0, 0), slategray);
+    background: slategray;
     padding: 10px;
 }
 
@@ -133,11 +133,22 @@ footer p
 }
 
 
-@media screen and (max-width: 1000px)
+
+@media screen and (min-width: 600px) and (max-width: 1100px)
     {
      .avion
         {
             width: 135px;
             height: 61px;
+        }
+    }
+
+
+@media screen and (max-width: 600px)
+    {
+     .avion
+        {
+            width: 68px;
+            height: 31px;
         }
     }
