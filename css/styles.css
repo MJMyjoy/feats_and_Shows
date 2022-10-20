@@ -76,6 +76,7 @@ main
 figure img
 {
     width: 200px;
+    object-fit: cover;
 }
 
 figcaption
@@ -108,7 +109,6 @@ figcaption
   {
       border-radius: 5px;
       padding: 5px;
-      outline: none;
       transition: all 0.7s ease-in-out;
   }
   
