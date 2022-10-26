@@ -27,8 +27,8 @@ height: 500px;
  button{
 	
 border: none;
-cursor: pointer
-	
+cursor: pointer;
+outline: none;
 	}
 	
 .precedent,

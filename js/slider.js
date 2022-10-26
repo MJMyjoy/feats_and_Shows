@@ -1,7 +1,7 @@
 
 var diaporama = [1,1];
-var diapos = ["diapo1", "diapo2"]
-var demos = ["demo1", "demo2"]
+var diapos = ["diapo1"]
+var demos = ["demo1"]
 affichage(1, 0 , 0);
 affichage(1, 1, 1);
 
