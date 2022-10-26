@@ -1,4 +1,8 @@
 /* STYLES DE BASE */
+html
+{
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -6,6 +10,7 @@ body {
     background: url("../img/nuages.jpeg")no-repeat;
     background-size: cover; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 h1
 {
@@ -117,6 +122,12 @@ figcaption
       box-shadow: 0 6px 6px 0 rgba(255, 192, 203, 0.26),
                   0 10px 20px 0 rgba(255, 192, 203, 0.19);
       }
+/* certaines images */
+
+.photo
+{
+    border-radius: 100%;
+}
   
   /* le pied */
   
@@ -141,6 +152,7 @@ footer p
             width: 135px;
             height: 61px;
         }
+      
     }
 
 
@@ -151,4 +163,11 @@ footer p
             width: 68px;
             height: 31px;
         }
+       
     }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
