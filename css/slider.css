@@ -23,15 +23,13 @@ height: 500px;
 border: none;
 cursor: pointer;
 outline: none;
-
-transition: opacity 0.5s ease-in-out;
 	}
 	
 .precedent,
 .suivant{
 	opacity: 0;
 color: silver;
-transition:color .4s linear;
+transition:color .4s linear, opacity .4s linear;
 transform:translatey(-50%);
 top:50%;
 padding:.5rem;
