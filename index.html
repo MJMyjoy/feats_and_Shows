@@ -12,7 +12,7 @@
     <script src="js/slider.js" defer></script>
 
     <title>feats & Shows</title>
-    <link rel="stylesheet" href="style.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,500;8..144,700;8..144,900&display=swap" rel="stylesheet" />
@@ -68,10 +68,18 @@
     <button class="suivant" aria-label="suivant" onclick="boutons(1, 0, 0)">❯</button>
     </div>
     <div class=cadre-demo>
-    <button class="demo1" onclick="actifIndic(1, 0, 0)">•</button> 
-    <button class="demo1" onclick="actifIndic(2, 0, 0)">•</button> 
-    <button class="demo1" onclick="actifIndic(3, 0, 0)">•</button>
+    <button class="demo1" onclick="actifIndic(1, 0, 0)"> • </button> 
+    <button class="demo1" onclick="actifIndic(2, 0, 0)"> • </button> 
+    <button class="demo1" onclick="actifIndic(3, 0, 0)"> • </button>
     </div>
+<script>
+    // Pour que le slide avance automatiqument apres 10 secondes
+setInterval(function(){
+  boutons(1, 0, 0);
+  }, 7*1000
+)
+</script>
+
 
 <br>
     <div>

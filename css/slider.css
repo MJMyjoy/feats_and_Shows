@@ -44,7 +44,7 @@ position:absolute
 
 .diapo1:hover ~ button
 {
-	opacity: 1;
+	opacity: 0.7;
 }
 
 .precedent:hover,

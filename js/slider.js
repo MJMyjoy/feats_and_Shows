@@ -28,3 +28,4 @@ function affichage(n, no, dm) {
   x[diaporama[no]-1].style.opacity = "1";  
 	 indic[diaporama[no]-1].className += " numeros";
 }
+
