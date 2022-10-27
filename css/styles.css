@@ -32,7 +32,10 @@ a
     color: pink;
     text-decoration: none;
 }
-
+button
+{
+    outline: none;
+}
 /* KEYFRAMES */
 
 @keyframes page 

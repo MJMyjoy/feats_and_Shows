@@ -2,11 +2,8 @@
 *{box-sizing:border-box}
 body{margin:0;}
 .cadre-diapo{
-
 height: 500px;
-
 position:relative
-
 	}
 	
 	
@@ -19,21 +16,20 @@ top:50%;
 transition:opacity 1s;
 width:100%;
 height: 500px;
-
-	
 }
 	
 
- button{
-	
+ button{	
 border: none;
 cursor: pointer;
 outline: none;
+
+transition: opacity 0.5s ease-in-out;
 	}
 	
 .precedent,
 .suivant{
-
+	opacity: 0;
 color: silver;
 transition:color .4s linear;
 transform:translatey(-50%);
@@ -47,10 +43,17 @@ position:absolute
 .precedent{left:0}
 .suivant{right:0}
 	
+
+.diapo1:hover ~ button
+{
+	opacity: 1;
+}
+
 .precedent:hover,
-.suivant:hover{color:black}
+.suivant:hover{color:black; opacity: 1;}
 	
-	.cadre-demo{display: flex;justify-content:center}
+.cadre-demo{display: flex;justify-content:center}
+
 .demo1
 {
 	border-radius: 100%;
@@ -83,10 +86,10 @@ background:#7A5FFF
 {
 	.cadre-diapo
 	{
-		height: 250px;
+		height: 200px;
 	}
 	.diapo1
 	{
-		height: 250px;
+		height: 200px;
 	}
 }
