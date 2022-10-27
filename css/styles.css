@@ -102,7 +102,7 @@ figcaption
 .icones
   {
       object-fit: cover;
-      height: 50px;
+      height: 45px;
       padding: 7px;
       border-radius: 5px;
       transition: all 0.8s ease-in-out;
