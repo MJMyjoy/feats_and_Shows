@@ -41,6 +41,10 @@
         transform: rotate(-17deg) translateX(5px);
     }
     
+    .main-navlinks {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    }
+
     .hamburger {
         display: none;
     }
