@@ -58,7 +58,6 @@ box-shadow: 0 6px 6px 0 rgba(255, 192, 203, 0.26),
 
 #texte
 {
-    user-select: none;
     padding: 20px 1px;
     animation: danse 2s both ease-in-out infinite;
     outline: none;
