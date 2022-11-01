@@ -46,8 +46,8 @@ box-shadow: 0 6px 6px 0 rgba(255, 192, 203, 0.26),
     }
     50%
     {
-        transform: scale(1.2) rotateY(30deg);
-        opacity: .8;
+        transform: scale(1.15) rotateY(20deg);
+        opacity: .9;
     }
     100%
     {

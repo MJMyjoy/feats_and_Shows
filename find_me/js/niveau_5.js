@@ -28,10 +28,11 @@ let erreurs = ["Bonjuor ", "monsiuer, ", "madamme ", "uo ", "mademioselle ", "..
 "J'ai ", "sius ", "telement ", "conttent ", "a ", "telle ", "piont ", "qeu ", "je ",
 "rédigais ", "asséz ", "rapidemment ", "ét ", "j'ai ", "crios ", "bein ", "qeu ", "l'orhtographe ",
 "dé ", "l'uns ", "de ", "mot ", "dams ", "ces ", "tetxe ", "m'as ", "échapée!<br> ",
-"Vuos ", "l'aveez ", "retruové? ", "Alros ", "aidé-moi ", "a ", "lé ", "coriger ", "s'ils ",
+"Vuos ", "l'aveez ", "retruové? ", "Alros ", "aidé-moi ", "a ", "lé ", "coriger ", "s'li ",
 "vuos ", "plaie, ", "pius ", "cliquer ", "sùr ", "Okey. "];
 
 let x = Math.floor(Math.random() * correct.length);
+
 le_texte[x] = erreurs[x];
 
 
@@ -41,6 +42,7 @@ let okay = document.getElementById("okay");
 
 let resultat = document.getElementById("resultat");
 let texte_result = document.getElementById("texte_result");
+let btn_result = document.getElementById("btn_result");
 
 let timeout = document.getElementById("timeout");
 let lose_result = document.getElementById("lose_result");
@@ -83,6 +85,7 @@ okay.onclick = function()
         // On rajoute les espace apres chaque mot
         votre_texte[i]+=" ";
     }
+    // On efface le nom
     votre_texte[5] = "...<br><br> ";
 
     // Disparition du bouton
@@ -105,8 +108,11 @@ okay.onclick = function()
     if (verificateur)
     {
         texte_result.style.animation = "danse 2s both ease-in-out infinite";
-        texte_result.style.color = "pink";
-        texte_result.innerHTML = "Félicitations! Le texte est maintenant bien correct!<br>Vous voulez encore jouer ?";
+        texte_result.style.color = "yellow";
+        texte_result.innerHTML = "Félicitations!!! <br>Vous avez corrigé tous les textes du jeu avec succès! <br>Vous êtes vraiment génial! <br>Voulez-vous encore jouer? <br>";
+        // On adapte le lien
+        btn_result.href="niveau_1.html";
+        btn_result.innerHTML="Reprendre";
     }
     else
     {

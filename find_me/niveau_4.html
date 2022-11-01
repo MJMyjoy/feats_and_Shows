@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/jules.css">
+    <link rel="stylesheet" href="css/find_me.css">
+    <script src="../js/script.js" defer></script>
+    <script src="js/niveau_4.js" defer></script>
+
+    <title>Find me - feats & Shows</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,500;8..144,700;8..144,900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
+            <img src="../img/logo.png" alt="chat icon">
+            <span>feasts & Shows</span>
+        </a>
+
+        <div class="main-navlinks">
+            <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+            <div class="navlinks-container">
+                <a href="../index.html" aria-current="page">Acceuil</a>
+                <a href="../services.html">Services</a>
+                <a href="../communaute.html">Communauté</a>
+                <a href="../index.html#aproposdenous">A propos de nous</a>
+                <a href="../index.html#contacts">Contacts</a>
+            </div>
+        </div>
+
+        <div class="nav-authentication">
+            <a href="../hits.html" class="sign-user" aria-label="Join us">
+                <img src="../ressources/chat.svg" alt="user-icon">
+            </a>
+            <div class="sign-btns">
+                <a href="https://chat.whatsapp.com/D2aZ4xJ9c6mHXBao1OpE4v" target="_blank">Join us</a>
+                <a href="../hits.html">The Hits</a>
+            </div>
+        </div> 
+    </nav>
+
+    <br> <br><br>
+
+    <img src="../img/avion.png" alt="Avion" class="avion" />    
+
+
+<main>
+ 
+    <h1>Find me</h1><br>
+    <h2>Niveau 4</h2><br>
+    <div id="game">
+        <div id="jeu">
+            <div id="texte" contenteditable="true" spellcheck="false"></div><br>
+            <button id="okay" class="btn_b">Okay</button><br>
+        </div>
+
+        <div id="resultat">
+            <div id="texte_result">
+
+            </div><br>
+            <a href="niveau_3.html" class="btn" id="btn_result">Réessayer</a><br>
+        </div><br>
+    </div>
+
+
+    <div id="timeout">
+        <div id="texte_lose">
+                Vous avez mis trop de temps ! <br><br>
+                <div id="lose_result"></div>
+        </div><br>
+        <a href="niveau_3.html" class="btn">Réessayer</a><br>
+    </div><br>
+
+
+</main>
+
+</body>
+</html>
