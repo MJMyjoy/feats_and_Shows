@@ -118,7 +118,7 @@ okay.onclick = function()
     {
         if(x===5)
         {
-            texte_result.innerHTML = "Mais non! Mon texte était déjà bien correct!<br> Vous vous êtes aussi trompé?<br> Je ne suis donc pas le seul à être tellement joyeux hein!<br>";
+            texte_result.innerHTML = "Mais non! Mon texte était déjà bien correct!<br> Vous vous êtes aussi trompé?<br> Je ne suis donc pas le seul à être tellement joyeux hein!";
         }
         else
         {
