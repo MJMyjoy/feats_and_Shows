@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jeux de texte</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <textarea rows="3" placeholder="Saisir quelque chose ici.." id="my-text-box"></textarea>
+        <div id="result">Appuyer sur l'un des boutons ci-dessous pour commencer</div>
+        <div class="buttons">
+            <button onclick="reverseStr()">Renverser </button>
+            <button onclick="isPalindrome()">verifier si pallindrome</button>
+        </div>
+        <div class="buttons">
+            <button onclick="charCount()">compter les caracteres</button>
+            <button onclick="wordCount()">compter les mots</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-text" placeholder="saisissez le mot à chercher" />
+            <button onclick="search()">Rechercher</button>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+
+</html>
