@@ -100,12 +100,12 @@ textarea {
         width: 100%;
     }
 }
-@media screen and (max-width: 900px) {
+
+
+@media screen and (max-width: 1000px) {
     .container
     {
         width: 100%;
-        max-width: 100%;
-        min-width: 100%;
     }
     #search-text
     {
