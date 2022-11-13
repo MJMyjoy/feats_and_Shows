@@ -87,7 +87,7 @@ const questionGenerator = () => {
     questionGenerator();
     // timeout
     var jeu = setTimeout(function(){
-        stopGame(`ouf!! Vous avez mis trop de temps! <span>temps</span>`);
+        stopGame(`ouf!! Vous avez mis trop de <span>temps</span>!`);
     }, 1000*20)
 
     // clear timeout
