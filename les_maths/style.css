@@ -141,3 +141,16 @@ button
 .hide {
     display: none;
 }
+
+
+@media screen and (max-width: 900px) {
+    .container
+    {
+        width: 100%;
+    }
+    #question
+    {
+        transform: scale(0.75);
+    }
+
+}
