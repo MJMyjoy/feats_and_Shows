@@ -1,0 +1,128 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+#lose, #win, #game, #home
+{
+    position: absolute;
+    top: 0;
+    height: 250px;
+    width: 100%;
+}
+
+#home
+{
+  background-color: skyblue;
+  color: white;
+}
+
+
+@keyframes rouge
+{
+    75%
+    {
+        color: red;
+    }
+}
+@keyframes grand
+{
+    0%
+    {
+        transform: scale(0);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+
+#game
+{
+    display: none;
+}
+
+#game, #quiz
+{
+    animation: rouge 1s 55s infinite;
+}
+
+form
+{
+    animation: grand 1s both ease-in-out;
+}
+
+
+
+label
+{
+    font-size: 20px;
+    text-transform: uppercase;
+    user-select: none;
+    font-family: "Poppins", sans-serif; 
+}
+
+
+
+input
+{
+    text-align: center;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+
+input:focus {
+    border-color: rgba(0, 0, 0, .3);
+    outline: none;
+}
+
+
+#win
+{
+    background-color: yellow;
+    color: white;
+    transform: scale(0) skew(180deg);
+    transition: transform 1s ease-in-out;
+}
+
+#lose
+{
+    background-color: red;
+    color: white;
+    display: none;
+}
+
+
+.jouer, .lancer
+{
+    background-color: white;
+    color: rgba(0, 0, 0, .7);
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    font-size: italic;
+    transition: transform 0.2s ease-in-out;
+    outline: none;
+}
+.jouer:hover, .lancer:hover
+{
+    color: black;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26),
+				0 10px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+.jouer:active, .lancer:active
+{
+    transform: scale(1.2);
+}
