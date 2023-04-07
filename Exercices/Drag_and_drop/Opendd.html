@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .draggableBox {
+position: absolute;
+width: 80px; height: 60px;
+padding-top: 10px;
+text-align: center;
+font-size: 40px;
+background-color: #222;
+color: #CCC;
+cursor: move;
+user-select: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="draggableBox">1</div>
+<div class="draggableBox">2</div>
+<div class="draggableBox">3</div>
+<script>
+    (function() { // On utilise une IEF pour ne pas polluer l'espace global
+var storage = {}; // Contient l'objet du div en cours de déplacement
+function addEvent(element, event, func) {
+    // Une fonction pour gérer les événements sous tous les navigateurs
+if (element.attachEvent) {
+element.attachEvent('on' + event, func);
+} else {
+element.addEventListener(event, func, true);
+}
+}
+function init() { // La fonction d'initialisation
+var elements = document.getElementsByTagName('div'),
+elementsLength = elements.length;
+for (var i = 0 ; i < elementsLength ; i++) {
+if (elements[i].className === 'draggableBox') {
+addEvent(elements[i], 'mousedown', function(e) {
+    // Initialise le drag & drop
+var s = storage;
+s.target = e.target || event.srcElement;
+s.offsetX = e.clientX - s.target.offsetLeft;
+s.offsetY = e.clientY - s.target.offsetTop;
+});
+addEvent(elements[i], 'mouseup', function() {
+    // Termine le drag & drop
+storage = {};
+});
+}
+}
+addEvent(document, 'mousemove', function(e) {
+    // Permet le suivi du drag & drop
+var target = storage.target;
+if (target) {
+target.style.top = e.clientY - storage.offsetY +
+'px';
+target.style.left = e.clientX - storage.offsetX +
+'px';
+}
+});
+}
+init(); // On initialise le code avec notre fonction toute prête
+})();
+
+</script>
+</body>
+</html>

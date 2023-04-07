@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .dd {
+      position: absolute;
+      width: 80px;
+      object-fit: cover;
+      cursor: move;
+      top: 100px;
+    }
+    #un
+    {
+    left: 100px;
+    }
+    #deux
+    {
+    left: 200px
+    }  
+    #trois
+    {
+    left: 300px;
+    }
+    #quatre
+    {
+    left: 400px;
+    }
+    #cinq
+    {
+    left: 500px;
+    }
+    </style>
+</head>
+<body>
+    <img src="un.png" class="dd" id="un">
+    <img src="deux.png" class="dd" id="deux">
+    <img src="trois.png" class="dd" id="trois">
+    <img src="quatre.png" class="dd" id="quatre">
+    <img src="cinq.png" class="dd" id="cinq">
+
+<script>
+let drag = {}; // Contient l'objet du div en cours de déplacement
+let img = document.querySelectorAll('.dd');
+
+for (var i = 0 ; i < img.length ; i++) {
+
+    img[i].onmousedown=function(e) {
+    // Initialise le drag & drop
+        drag[0] = e.target;
+        drag[1] = e.clientX - drag[0].offsetLeft;
+        drag[2] = e.clientY - drag[0].offsetTop;
+    }
+
+    img[i].onmouseup=function() {
+   // Termine le drag & drop
+        drag = {};
+    } 
+
+    document.onmousemove=function(e) {
+    // Permet le suivi du drag & drop
+    /* Le mousemove est applique sur le document (on peut ou ne pas l'ecrire) et non sur l'element,
+     afin que le drag and drop continue meme si on deplace rapidement le curseur rapidement et
+     qu'il quitte l'element. Aussi, pour que ca continue meme si l'element en cours du drag se retouve
+     en dessous d'un autre    */
+    if (drag[0]) {
+        // drag[1] et drag[2] peuvent etre negatives 
+       
+        drag[0].style.left = e.clientX - drag[1] + 'px';
+        drag[0].style.top = e.clientY - drag[2] + 'px';
+        }
+      }
+    }
+
+</script>
+</body>
+</html>

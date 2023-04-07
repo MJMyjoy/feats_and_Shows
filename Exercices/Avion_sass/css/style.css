@@ -1,0 +1,36 @@
+button
+{
+    display: block;
+    margin: 10px auto;
+
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    transition: all 50ms;
+}
+
+button:active
+{
+    color: pink;
+
+    transform: scale(1.2);
+}
+
+
+img
+{
+    width: 270px;
+    height: 122px;
+    object-fit: cover;
+
+    transform: translateX(0%);
+    transform: translateY(400%);
+    transition: all 10s;
+}
+
+button:focus + img
+{
+    transform: translateX(400%);
+}

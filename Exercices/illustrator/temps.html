@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+     <!--<meta http-equiv="refresh" content="0.13"> --> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="blue">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body
+        {
+            text-align: center;
+            color: blue;
+        }
+        #temps
+        {
+            font-size: 35px;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;            
+        }
+
+    </style>
+    <title>TP - Temps</title>
+</head>
+
+<body>
+    <h1>Horloge et Callendrier</h1>
+    <p id="temps"></p>
+
+    <script>
+        let temps = document.getElementById("temps");
+
+        setInterval(function(){
+            let today = new Date();
+            let annee = today.getFullYear();
+            let mois = today.getMonth()+1;
+            let jour = today.getDate();
+            let heure = today.getHours();
+            let min = today.getMinutes();
+            let sec = today.getSeconds();
+            let mil =today.getMilliseconds();
+
+      
+            temps.innerHTML = jour+'/'+mois+'/'+annee+' '+heure+'H '+min+'min '+sec+'sec '+mil;
+       }, 13);
+    </script>
+</body>
+</html>

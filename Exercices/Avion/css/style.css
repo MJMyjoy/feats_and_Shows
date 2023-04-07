@@ -1,0 +1,36 @@
+.bouton
+{
+    display: block;
+    margin: 10px auto;
+
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    transition: all 50ms;
+}
+
+.bouton:active
+{
+    color: pink;
+
+    transform: scale(1.2);
+}
+
+
+.image
+{
+    width: 270px;
+    height: 122px;
+    object-fit: cover;
+
+    transform: translateY(400%);
+    transition: all 5s ease-in-out;
+}
+
+.bouton:focus + .image
+{
+    transform: translateX(400%) rotate(180deg) skew(180deg);
+
+}

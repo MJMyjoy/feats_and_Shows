@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Calculatrice</title>
+</head>
+
+<body>
+<div>
+			<div class="resultat"></div>
+<br>
+			<button class="valeur">1</button>
+			<button class="valeur">2</button>
+			<button class="valeur">3</button>
+			<button class="effacer">Effacer</button>
+<br>
+			<button class="valeur">4</button>
+			<button class="valeur">5</button>
+			<button class="valeur">6</button>
+
+			<button class="valeur">+</button>
+			<button class="valeur">-</button>
+			<button class="valeur">*</button>
+			<button class="valeur">/</button>
+			<button class="valeur">%</button>
+			<button class="fonction">PI</button>
+<br>
+			<button class="valeur">7</button>
+			<button class="valeur">8</button>
+			<button class="valeur">9</button>
+
+			<button class="fonction">R.carré</button>
+			<button class="fonction">X^2</button>	
+			<button class="fonction">Random</button>
+<br>
+			<button class="valeur">0</button>
+			<button class="valeur">.</button>
+			<button class="calcul">=</button>
+
+			<button class="fonction">Sin</button>
+			<button class="fonction">Cos</button>
+			<button class="fonction">Tang</button>	
+			<button class="fonction">Log</button>
+		</div>
+
+<script>
+let effacer = document.querySelector(".effacer");
+let resultat = document.querySelector(".resultat");
+let valeur = document.querySelectorAll(".valeur");
+let calcul = document.querySelector(".calcul");
+let fonctions = document.querySelectorAll(".fonction");
+
+effacer.onclick = function(){
+	resultat.innerHTML = "";
+}
+
+for(let i =0; i<valeur.length; i++)
+{
+valeur[i].onclick=
+function ()
+{	
+	let x= valeur[i].innerHTML;
+	resultat.innerHTML +=x;
+}
+}
+	
+calcul.onclick= function()
+{
+	resultat.innerHTML = eval(resultat.innerHTML);
+	}
+
+
+
+function scientific(n)
+{
+	let a = parseFloat(eval(resultat.innerHTML));
+	switch (n)
+	{ 
+		case 0:resultat.innerHTML = Math.PI; break;
+	  	case 1:resultat.innerHTML = Math.sqrt(a); break;
+		case 2:resultat.innerHTML = Math.pow(a, 2); break;
+		case 3:resultat.innerHTML = Math.floor(Math.random()*1000);; break;
+		case 4:resultat.innerHTML = Math.sin(a); break;
+		case 5:resultat.innerHTML = Math.cos(a); break;
+		case 6:resultat.innerHTML = Math.tan(a); break;
+		case 7:resultat.innerHTML = Math.log(a); break;
+	}
+}
+
+for(let i =0; i<valeur.length; i++)
+{
+	fonctions[i].onclick= function()
+	 {scientific(i);}
+}
+
+</script>
+</body>
+</html>

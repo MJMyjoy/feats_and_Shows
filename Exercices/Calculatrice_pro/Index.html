@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="mes_styles.css">
+<head><title>Calculatrice 2.0</title>
+<script src="mes_scripts.js"></script>
+</head>
+<body>
+	<h1>Calculatrice</h1>
+<form name="form1">
+	
+<table cellspacing="0" cellpadding="6">
+	<tr>
+		<td>
+			<input type="text" value="" name="case1" class="rep"/>
+		</td>
+		<td>
+			<input type="button" value=" Effacer "  onClick="document.form1.case1.value=''" class="effacer"/>
+						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="">
+			<input type="button" value=" 1 " onClick="saisie(1)"/>
+			<input type="button" value=" 2 " onClick="saisie(2)"/>
+			<input type="button" value=" 3 " onClick="saisie(3)"/>
+		</td>
+		<td colspan="">
+			<input type="button" value=" * " onclick="form1.case1.value+='*'">
+			<input type="button" value=" / " onclick="form1.case1.value+='/'">
+			<input type="button" value=" + " onclick="form1.case1.value+='+'">
+			<input type="button" value=" - " onClick="form1.case1.value+='-'">
+			<input type="button" value=" ( " onClick="form1.case1.value+='('">
+			<input type="button" value=" ) " onClick="form1.case1.value+=')'">
+		</td>
+	</tr>
+		<tr>
+		<td colspan="">
+			<input type="button" value=" 4 " onClick="saisie(4)"/>
+			<input type="button" value=" 5 " onClick="saisie(5)"/>
+			<input type="button" value=" 6 " onClick="saisie(6)"/>
+		</td>
+		<td>
+			<input type="button" value=" mod " onClick="form1.case1.value+='%'"/>
+			<input type="button" value=" Rcarré " onClick="scientific(1)"/>
+			<input type="button" value="   Pi   " onClick="scientific(3)"/>
+			<input type="button" value=" x² " onClick="scientific(2)" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="">
+			<input type="button" value=" 7 " onClick="saisie(7)"/>
+			<input type="button" value=" 8 " onClick="saisie(8)"/>
+			<input type="button" value=" 9 " onClick="saisie(9)"/>
+		</td>
+		<td>
+
+			<input type="button" value=" x^3 " onClick="scientific(14)" />
+			<input type="button" value="  Sin  " onClick="scientific(4)"/>
+			<input type="button" value="  Cos  " onClick="scientific(5)"/>
+			<input type="button" value="  Tan  " onClick="scientific(6)"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="">
+			<input type="button" value=" 0 " onClick="saisie(0)"/>
+			<input type="button" value=" . " onClick="saisie('.')"/>
+			<!-- La fonction eval() est appelée une fois qu'on clique sur = pour faire les calcules de tout ce qui se trouve dans la barre des reponses -->
+			<input type="button" value="  =  " onClick="form1.case1.value= eval(form1.case1.value)"/>
+		</td>
+		<td>
+			<input type="button" value=" Ln " onClick="scientific(7)"/>
+			<input type="button" value=" e^x " onClick="scientific(8)"/>
+			<input type="button" value="  Ln2  " onClick="scientific(9)"/>
+			<input type="button" value=" Ln10 " onClick="scientific(10)"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		</td>
+		<td>
+			<input type="button" value=" Asin " onClick="scientific(11)"/>
+			<input type="button" value=" Acos " onClick="scientific(12)"/>
+			<input type="button" value=" Atan " onClick="scientific(13)"/>
+
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

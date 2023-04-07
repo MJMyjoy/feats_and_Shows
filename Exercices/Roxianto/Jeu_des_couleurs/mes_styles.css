@@ -1,0 +1,82 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    width: 48%;
+    height: 100px;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 100px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.lanceur 
+{
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: x-large;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(26, 224, 26);
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-bottom: 100px;   
+}
+
+.lanceur:hover {
+    /* :hover veut dire au survol de la souris */
+    box-shadow: rgba(0,0,0,0.2) 2px 2px;
+    cursor: pointer;
+    background-color: greenyellow;
+    color: white;
+}
+
+
+.block {
+    color: white;
+    display: inline-block;
+    width: 47.5%;
+    height: 80px;
+    background-color: darkblue;
+    padding: 5% 0;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 1% 1%;
+    border-radius: 5px;
+    border: solid 1px grey;
+}
+
+.block:hover {
+    box-shadow: grey 2px 3px 2px;
+    cursor: pointer;
+}
+
+
+.conteneur {
+    width: 100%;
+}
+
+#nuit_jour
+{
+    border: none;
+    background-color: indigo;
+    margin-left: 1100px;
+    padding: 20px;
+    color: white;
+    width: 190px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+#nuit_jour:hover {
+        box-shadow: rgba(0,0,0,0.2) 2px 2px;
+        cursor: pointer;
+        background-color: blue;
+        color: white;
+    }

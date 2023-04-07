@@ -1,0 +1,49 @@
+$couleur: skyblue;
+
+body
+{
+    background-color: $couleur;
+    .bouton
+    {
+        display: block;
+        margin: 10px auto;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 50ms;
+        &:active
+        {
+            color: $couleur;
+            transform: scale(1.2);
+        }
+    }
+}
+
+main
+{
+    .image
+    {
+        width: 270px;
+        height: 122px;
+        transform: translateY(400%);
+        transition: all 5s;
+    }
+    .monsite
+    {
+        width: 50%;
+        margin: 0 auto;
+        opacity: 0;
+        transition: all 7s;
+    }
+}
+
+.bouton:focus + main
+{
+    .image
+    {
+    transform: translateX(400%);
+    }
+    .monsite
+    {
+        opacity: 1;
+    }
+}

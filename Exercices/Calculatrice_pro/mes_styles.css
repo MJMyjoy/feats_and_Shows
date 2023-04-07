@@ -1,0 +1,35 @@
+        /* FEUILLE DES STYLES */
+		   
+		input
+		{
+			border-radius: 2px;
+			background-color: black;
+            border: 0px;
+            color: white;
+			transform: scale(1);
+			transition: transform 100ms;
+		}
+		input:active
+		{
+			transform: scale(1.2);
+		}
+        .effacer
+        {
+            background-color: darkred;
+        }
+        .rep
+        {
+            background-color: white;
+            color: black;
+        }
+		table
+		{
+			border: 2px solid black;
+			border-radius: 5px;
+			text-align: center;
+			background-color: whitesmoke;
+		}		
+		td
+		{
+			text-align: center;
+		}

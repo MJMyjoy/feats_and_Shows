@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le gout du moment</title>
+    <style>
+        html
+            {
+                scroll-behavior: smooth;
+            }
+            body
+            {
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+            }
+            a
+            {
+                text-decoration: none;
+                transition: 3s color;
+            }
+            a:hover
+            {
+                color: red;
+            }
+            nav
+            {
+                text-align: right;
+                margin: 2px;
+            }
+            nav a
+            {
+                color: black;
+                font-size: 16px;
+                font-weight: bold; 
+                padding: 5px;
+                display: inline-block;
+            }
+            header
+            {
+                background-color: pink;
+                margin: 0px;
+                padding: 10px;
+                height: 175px;
+             /*   transition: color 3s;  */
+               /* transition: ease-in-out 5s; */
+             /*   transition: all 5s; */
+             transition: linear 5s;
+            }
+            header:hover
+            {
+                color: wheat;
+                background-color: darkred;
+                font-size: 50px;
+            }
+            header h1 
+            {
+                font-size: 50px;
+            }
+            header q
+            {
+                color: coral;  
+                font-style: italic;
+            }
+            .accu, figcaption
+            {
+                font-size: 14px;
+                font-style: italic;
+                transition: color 3s; 
+            }
+            .accu:hover, figcaption:hover
+            {
+                color: red;
+            }
+            figure
+            {
+                width: 23%;
+                height: 300px;
+                margin: 10px;
+                border: 0.01px darkred solid;
+                float: left;
+                border-radius: 10px;
+                cursor: move;
+            }
+        
+            img
+            {
+                object-fit: cover;
+                height: 250px;
+                width: 100%;
+            }
+            img:hover
+            {
+                opacity: 0.8;
+            }
+            button
+            {
+                border-radius: 3px;
+                background-color: lightcoral;
+                border: 0px;
+                height: 25px;
+                transition: 3s color;
+                cursor: pointer;
+            }
+            button:hover
+            {
+                color: wheat;
+                background-color: darkred;
+            }
+            footer
+            {
+                background-color: brown;
+                width: 100%;
+                height: 170px;
+                font-size: 12px;
+                margin: 0px;
+                padding: 10px;
+                margin-top: 50%;
+                transition: color 3s;
+            }
+            footer:hover
+            {
+                background-color: darkred;
+                color: pink;
+                font-size: 13;
+                font-style: italic;
+            }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#Acc"> Accueil</a>
+        <a href="#Menu">Menu</a>
+        <a href="#Cont">Contacts</a>
+    </nav>
+    <header id="Acc">
+        <h1>Le gout du moment</h1>
+        <q>Bienvenue dans le meilleur restorant du moment</q>
+    </header>
+
+    <main>
+        <p class="accu">Nous disposons d'agreables menus disponibles juste pour vous!<br>
+        N'hesitez pas a passer une commande, en cliquant simplement sur le boiton au bas de votre repas favoris</p>
+<article id="Menu">
+    <section>
+        <figure  class="r1">
+            <img src="r1.jpeg" alt="repas">
+            <figcaption>Gouter a nos plats irresistibles</figcaption>
+            <button>Commander</button>
+        </figure>
+        <figure  class="r2">
+                <img src="r2.jpeg" alt="repas">
+                <figcaption>Gouter a nos plats irresistibles</figcaption>
+                <button>Commander</button>
+        </figure>
+        <figure  class="r3">
+            <img src="r3.jpeg" alt="repas">
+            <figcaption>Gouter a nos plats irresistibles</figcaption>
+            <button>Commander</button>
+       
+        </figure>
+        <figure  class="r4">
+            <img src="r4.jpeg" alt="repas">
+            <figcaption>Gouter a nos plats irresistibles</figcaption>
+            <button>Commander</button>
+        </figure>
+        </section>
+
+
+    <section>
+        <figure  class="f1">
+            <img src="f1.jpeg" alt="fruit">
+            <figcaption>Gouter au delice de l'ananas</figcaption>
+            <button>Commander</button>
+        </figure>
+        <figure  class="f2">
+                <img src="f2.jpeg" alt="fruit">
+                <figcaption>Gouter au delice de la fraise</figcaption>
+                <button>Commander</button>
+        </figure>
+        <figure  class="f3">
+            <img src="f3.jpeg" alt="fruit">
+            <figcaption>Gouter au delice de la banane</figcaption>
+            <button>Commander</button>
+       
+        </figure>
+        <figure  class="f4">
+            <img src="f4.jpeg" alt="fruit">
+            <figcaption>Gouter au delice de la pomme</figcaption>
+            <button>Commander</button>
+        </figure>
+        </section>
+</article>
+</main>
+<footer id="Cont">
+    <h1>Nos Contacts:</h1>
+    <p>Whatsapp:<br>
+    Facebook:<br>
+    Telegrame:<br>
+    Telephonne:<br>
+    Email:</p>
+</footer>
+  
+<script>
+   (function() {
+        // On utilise une IEF pour ne pas polluer l'espace global
+        var storage = {};
+        // Contient l'objet du div en cours de déplacement
+        function addEvent(element, event, func) {
+        // Une fonction pour gérer les événements sous tous les navigateurs
+            if (element.attachEvent) {
+                element.attachEvent('on' + event, func);
+            } else {
+            element.addEventListener(event, func, true);
+                }
+            }
+       function init() {
+            // La fonction d'initialisation
+        var elements = document.getElementsByTagName('figure'),
+        elementsLength = elements.length;
+        for (var i = 0 ; i < elementsLength ; i++) {
+        if (elements[i].className === 'draggableBox') {
+        addEvent(elements[i], 'mousedown', function(e) {
+    // Initialise le drag & drop
+        var s = storage;
+        s.target = e.target || event.srcElement;
+        s.offsetX = e.clientX - s.target.offsetLeft;
+        s.offsetY = e.clientY - s.target.offsetTop;
+        });
+        addEvent(elements[i], 'mouseup', function() {
+    // Termine le drag & drop
+        storage = {};
+        } 
+        );
+    }
+}
+    addEvent(document, 'mousemove', function(e) {
+    // Permet le suivi du drag & drop
+        var target = storage.target;
+        if (target) {
+        target.style.top = e.clientY - storage.offsetY +
+        'px';
+        target.style.left = e.clientX - storage.offsetX +
+        'px';
+        }
+    }   
+);
+}
+    init(); // On initialise le code avec notre fonction toute prête
+})();
+
+</script>
+</body>
+</html>
