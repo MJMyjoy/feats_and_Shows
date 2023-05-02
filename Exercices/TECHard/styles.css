@@ -1,0 +1,106 @@
+body
+{
+    text-align: center;
+    font-family: sans-serif;
+}
+button, input, textarea
+{
+    outline: none;
+}
+
+.ard-logo
+{
+    width: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26),
+				0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ard-title
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 200, 200);
+}
+
+.ard-legend
+{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(0, 180, 180);
+    color: white;
+}
+
+.form-div
+{
+    padding: 25px;
+    background-color: rgba(0, 255, 255, .2);
+    width: 80%;
+    margin: 40px auto;
+    box-shadow: 0 6px 6px 0 rgba(0, 150, 150, 0.16),
+				0 10px 20px 0 rgba(0, 150, 150, 0.09);
+}
+
+.form-adress
+{
+    width: 80%;
+    border-radius: 10px;
+    margin: 5px auto;
+    border: solid 1px rgba(0, 180, 180, .7);
+}
+.form-details
+{
+    width: 80%;
+    margin: 5px auto;
+    
+}
+.form-result
+{
+    width: 80%;
+    margin-left: 0px;
+    border: solid 1px rgba(0, 180, 180, .7);
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-copy
+{
+    width: 18%;
+    border: 0pc;
+    border-radius: 6px;
+    color: white;
+    background-color: rgb(0, 180, 180);
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+.form-copy:hover
+{
+    background-color: rgb(0, 220, 220);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26),
+				0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.ard-alert
+{
+    margin: 20px auto;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    color: rgb(0, 150, 150);
+    border-radius: 20px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26),
+				0 10px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+footer
+{
+    padding: 20px;
+}
+.footer-p
+{
+    font-size: small;
+}
+
+/* By MJ Myjoy */
